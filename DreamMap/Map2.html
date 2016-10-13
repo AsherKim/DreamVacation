@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type= "text/css" href="style.css">
+</head>
+<body>
+
+  <ul id="NavBar">
+   
+   <li class="NavItem"><a href="Dreammao.html">Index</a></li>
+   <li class="NavItem"><a href="Map1.html">Map1</a></li>
+   <li class="NavItem"><a class="Active" href="Map2.html">Map2</a></li>
+
+
+
+
+<div id="map" style="width:100%;height:500px"></div>
+
+
+
+<script>
+
+function myMap() {
+  var myCenter = new google.maps.LatLng(-16.5057093,-151.7025958);
+    //mycenter is a longitude/latitude object.It stores a point//
+  var mapCanvas = document.getElementById("map");
+  //mapcanvas stores the link to the div that the map will go in.//
+  var mapOptions = {
+  center: myCenter,
+  zoom: 15,
+  mapTypeId: 'hybrid'
+  };   
+  
+  //store the options for the map.note, we used myCenter.//
+  //the variable storing the point, in the center option//
+  
+  var map2 = new google.maps.Map(mapCanvas, mapOptions);
+  //creates the map itself.//
+  
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map2);
+}
+//creates a new marker at the myCenter location (we used the lat/long variable again)
+//we created two lines up.
+//THIS BPUT
+//This puts the marker on the map.//
+var origin = new google.maps.LatLng ( -16.5057093,-151.7025958)
+var marker2 = new google.mapsmMarker ({position:origin})
+marker2.setMap(map);
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+<p>
+<img src="Bora Bora.jpg">
+</p>
+<p>
+http://www.tahiti.com/island/bora-bora
+</p>
+
+
+
+
+
+
+
+
+</body>
+</html>
