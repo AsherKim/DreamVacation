@@ -3,20 +3,7 @@
 <head>
 
     <link rel="stylesheet" type= "text/css" href="style.css">
-</head>
-<body>
-
-  <ul id="NavBar">
-   
-   <li class="NavItem"><a href="index.html">Index</a></li>
-   <li class="NavItem"><a class="Active" href="Map1.html">Map1</a></li>
-   <li class="NavItem"><a href="Map2.html">Map2</a></li>
-
-
-<div id="map" style="width:100%;height:500px"></div>
-
-
-<script>
+    <script>
 
 function myMap() {
   var myCenter = new google.maps.LatLng(-16.5004,-151.7415);
@@ -32,16 +19,31 @@ function myMap() {
   
   var marker = new google.maps.Marker({position:myCenter});
   marker.setMap(map);
+  
+var origin = new google.maps.LatLng ( -16.5004,-151.7415);
+var marker2 = new google.maps.Marker({position:origin}); 
 }
 //creates a new marker at the myCenter location (we used the lat/long variable again)
 //we created two lines up.
 //THIS BPUT
 //This puts the marker on the map.//
-var origin = new google.maps.LatLng ( -16.5004,-151.7415)
-var marker2 = new google.mapsmMarker ({position:origin})
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxzv-WUNxhBHtGKfSeqHqbjowcN7WrvS8&callback=myMap"
+    async defer></script>
+</head>
+<body>
+
+  <ul id="NavBar">
+   
+   <li class="NavItem"><a href="index.html">Index</a></li>
+   <li class="NavItem"><a class="Active" href="Map1.html">Map1</a></li>
+   <li class="NavItem"><a href="Map2.html">Map2</a></li>
+
+
+<div id="map" style="width:100%;height:500px"></div>
+
+
 
 </body>
 </html>
